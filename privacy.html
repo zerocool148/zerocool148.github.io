@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Скринер акций РФ — конфиденциальность</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&family=IBM+Plex+Mono:wght@400&display=swap">
+<style>
+/* Layout: one readable column, document conventions of a legal notice */
+:root {
+  --bg: #f4f5f7; --surface: #ffffff; --fg: #1a1f2a; --muted: #5d6474; --line: #dde1e8; --accent: #1f8a80;
+  --body: "IBM Plex Sans", "Segoe UI", Roboto, Arial, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0b0c0e; --surface: #15171b; --fg: #eceef2; --muted: #9aa1ad; --line: #2a2d33; --accent: #3cc2b4; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #0b0c0e; --surface: #15171b; --fg: #eceef2; --muted: #9aa1ad; --line: #2a2d33; --accent: #3cc2b4; color-scheme: dark }
+body { background: var(--bg); color: var(--fg); font: 16px/1.6 var(--body); }
+main { max-width: 44rem; margin: 0 auto; padding-block: 40px 64px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+header { display: grid; gap: 6px; padding-bottom: 24px; border-bottom: 1px solid var(--line); margin-bottom: 8px; }
+.app { font: 0.8rem/1 var(--mono); color: var(--accent); letter-spacing: .06em; text-transform: uppercase; }
+h1 { font-size: 1.9rem; line-height: 1.2; margin: 0; text-wrap: balance; }
+.meta { color: var(--muted); font-size: .9rem; }
+h2 { font-size: 1.15rem; margin: 32px 0 8px; text-wrap: balance; }
+p, li { margin: 0 0 10px; }
+ul { padding-left: 1.2rem; margin: 0 0 10px; }
+table { border-collapse: collapse; width: 100%; font-size: .92rem; }
+.tw { overflow-x: auto; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; }
+th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+tr:last-child td { border-bottom: 0; }
+th { color: var(--muted); font-weight: 600; font-size: .8rem; letter-spacing: .04em; text-transform: uppercase; }
+code, .mail { font-family: var(--mono); font-size: .9em; }
+.mail { user-select: all; color: var(--accent); }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: .85rem; }
+</style>
+
+</head>
+<body>
+<main>
+  <header>
+    <span class="app">Скринер акций РФ · com.moex.screener</span>
+    <h1>Политика конфиденциальности</h1>
+    <span class="meta">Редакция от 14 ноября 2026 г. · версия приложения RS-1.0.0 (RuStore)</span>
+  </header>
+
+  <p>Здесь описано, какие данные обрабатывает мобильное приложение «Скринер акций РФ» (далее — приложение) и как они используются. Устанавливая и используя приложение, вы соглашаетесь с этой политикой.</p>
+
+  <h2>1. Коротко</h2>
+  <ul>
+    <li>У приложения нет собственного сервера. Аккаунт, портфель, избранное, алерты и настройки хранятся только на вашем устройстве.</li>
+    <li>Приложение показывает рекламу Рекламной сети Яндекса (РСЯ) — отдельной полосой внизу экрана. Для подбора рекламы SDK Яндекса получает технические данные устройства и рекламный идентификатор (раздел 5).</li>
+      <li>Приложение не совершает сделок и не подключается к брокерам.</li>
+    <li>Мы не продаём и не передаём третьим лицам ваш аккаунт, портфель, избранное и алерты: в рекламу они не попадают.</li>
+  </ul>
+
+  <h2>2. Какие данные хранятся на устройстве</h2>
+  <div class="tw"><table>
+    <thead><tr><th>Данные</th><th>Зачем</th></tr></thead>
+    <tbody>
+      <tr><td>Email, имя и пароль, если вы создали аккаунт</td><td>Локальный вход в профиль. Пароль хранится только в виде хэша PBKDF2 с солью, сам пароль не сохраняется. Код подтверждения показывается на экране и никуда не отправляется.</td></tr>
+      <tr><td>Портфель: бумаги, количество, цены покупки</td><td>Расчёт стоимости позиций и P&amp;L</td></tr>
+      <tr><td>Избранное, ценовые алерты, настройки стратегий и индикаторов</td><td>Работа скринера, сигналов и уведомлений</td></tr>
+      <tr><td>История сигналов и ленты алертов</td><td>Статистика сигналов на экране профиля</td></tr>
+    </tbody>
+  </table></div>
+  <p>Эти данные не покидают устройство, кроме случаев из разделов 4 и 6.</p>
+
+  <h2>3. Сетевые запросы</h2>
+  <p>Чтобы показывать котировки, новости и логотипы, приложение обращается к открытым источникам. В запросах не передаются ваш аккаунт, портфель и другие личные данные. Как любой интернет-сервер, эти источники видят технические данные запроса: IP-адрес, время, тип устройства. Их обработка регулируется политиками самих источников.</p>
+  <ul>
+    <li>Котировки и свечи: Московская биржа, <code>iss.moex.com</code>.</li>
+    <li>Логотипы эмитентов: <code>invest-brands.cdn-tinkoff.ru</code>, <code>s3-symbol-logo.tradingview.com</code>.</li>
+    <li>Новости (RSS): РБК, Коммерсантъ, Ведомости, Интерфакс, Investing.com, Smart-Lab, Финам, Банк России, Московская биржа.</li>
+    <li>Ссылки «Открыть источник», «Отчётность», «Экономический календарь» открываются во внешнем браузере.</li>
+  </ul>
+
+  <h2>4. Вход через Яндекс ID или VK ID</h2>
+  <p>Если в приложении доступен вход через Яндекс или VK и вы его выбрали, авторизация проходит на сайте выбранного сервиса. Приложение получает от него токен и основные данные профиля (имя, email) и хранит их только на устройстве. Обработка данных на стороне сервиса регулируется его политикой конфиденциальности.</p>
+
+  <h2>5. Реклама (Рекламная сеть Яндекса)</h2>
+    <p>В приложение встроен Yandex Mobile Ads SDK (ООО «Яндекс»). Баннер показывается отдельной полосой внизу экрана и не закрывает котировки и графики. Чтобы показать и подобрать рекламу, посчитать показы и клики и защититься от мошенничества, SDK сам передаёт в Яндекс:</p>
+    <ul>
+      <li>рекламный идентификатор устройства (Advertising ID) и идентификаторы приложения;</li>
+      <li>технические данные: модель и производитель устройства, версия Android, язык, оператор и тип сети, IP-адрес, примерный регион по IP;</li>
+      <li>события рекламы: запросы, показы, клики.</li>
+    </ul>
+    <p>Приложение не передаёт в SDK ваш email, портфель, избранное, алерты и другие данные из раздела 2. Для работы SDK использует сервис AppMetrica (ООО «Яндекс»). Обработка данных на стороне Яндекса регулируется <a href="https://yandex.ru/legal/confidential/">Политикой конфиденциальности Яндекса</a>.</p>
+    <p>Персонализацию рекламы можно ограничить: в настройках Android сбросьте или удалите рекламный идентификатор (обычно «Конфиденциальность» → «Реклама»). Реклама продолжит показываться, но без учёта ваших интересов.</p>
+
+    <h2>6. Резервные копии и экспорт</h2>
+  <ul>
+    <li>Экспорт портфеля в CSV и резервную копию настроек вы делаете сами. Файл сохраняется туда, куда вы укажете.</li>
+    <li>В Android включено системное резервное копирование. Если оно включено в настройках вашего телефона, Android может сохранять данные приложения в вашем облачном аккаунте. Это решаете вы в настройках устройства.</li>
+  </ul>
+
+  <h2>7. Разрешения</h2>
+  <div class="tw"><table>
+    <thead><tr><th>Разрешение</th><th>Зачем</th></tr></thead>
+    <tbody>
+      <tr><td><code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code></td><td>Загрузка котировок и новостей, проверка наличия сети</td></tr>
+      <tr><td><code>POST_NOTIFICATIONS</code></td><td>Уведомления о сигналах и ценовых алертах. Можно отключить в настройках Android.</td></tr>
+      <tr><td><code>VIBRATE</code></td><td>Вибрация при уведомлении</td></tr>
+      <tr><td><code>com.google.android.gms.permission.AD_ID</code> и служебные разрешения SDK рекламы</td><td>Добавляются SDK Яндекса: доступ к рекламному идентификатору для показа рекламы (раздел 5)</td></tr>
+      <tr><td><code>WAKE_LOCK</code>, <code>RECEIVE_BOOT_COMPLETED</code>, <code>FOREGROUND_SERVICE</code></td><td>Добавляются системной библиотекой фоновых задач Android (WorkManager) для фоновой проверки алертов</td></tr>
+    </tbody>
+  </table></div>
+  <p>Приложение не запрашивает доступ к контактам, местоположению, камере, микрофону, SMS и файлам вне выбранных вами.</p>
+
+  <h2>8. Как удалить данные</h2>
+  <ul>
+    <li>Выйти из аккаунта можно на экране «Профиль».</li>
+    <li>Чтобы удалить все данные, очистите данные приложения в настройках Android или удалите приложение.</li>
+    <li>Мы не храним копий ваших данных, поэтому после удаления восстановить их нельзя, если вы не сделали резервную копию.</li>
+  </ul>
+
+  <h2>9. Дети</h2>
+  <p>Приложение рассчитано на взрослых пользователей и не предназначено для лиц младше 18 лет. Мы сознательно не собираем данные детей.</p>
+
+  <h2>10. Не является инвестиционной рекомендацией</h2>
+  <p>Сигналы, оценки и расчёты в приложении — инструменты, а не индивидуальная инвестиционная рекомендация. Прошлые результаты не гарантируют будущих.</p>
+
+  <h2>11. Изменения политики</h2>
+  <p>При изменении состава данных или их обработки мы обновим эту страницу и дату редакции.</p>
+
+  <h2>12. Контакты</h2>
+  <p>Вопросы о конфиденциальности: <span class="mail">kozlovilya48@gmail.com</span></p>
+
+  <footer>Скринер акций РФ · Android · пакет com.moex.screener</footer>
+</main>
+</body>
+</html>
